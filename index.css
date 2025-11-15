@@ -8,6 +8,7 @@ body {
   padding: 0;
   font-family: "Roboto";
   color: #222;
+  background-color: #cadbcb;
 }
 
 /* typography */
@@ -47,16 +48,16 @@ li {
 }
 
 .li-green {
-  background-color: #e5fdea;
+  background-color: #80ac89;
 }
 .li-yellow {
   background-color: #fcfdd6;
 }
 .li-blue {
-  background-color: #e5f9fe;
+  background-color: #7ac0d1;
 }
 .li-pink {
-  background-color: #fcf1fe;
+  background-color: #c1a8c5;
 }
 
 /* layout */
