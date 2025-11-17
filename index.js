@@ -11,6 +11,6 @@ closeBtn.addEventListener("click", () => {
 });
 
 consentForm.addEventListener("submit", (e) => {
-  event.preventDefault();
+  e.preventDefault();
   console.log("Form submitted");
 });
