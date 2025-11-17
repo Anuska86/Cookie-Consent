@@ -5,7 +5,6 @@ const modalText = document.getElementById("modal-text");
 
 setTimeout(() => {
   modal.style.display = "inline";
-  closeBtn.disabled = true;
 }, 1500);
 
 closeBtn.addEventListener("click", () => {
