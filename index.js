@@ -14,6 +14,9 @@ closeBtn.addEventListener("click", () => {
 consentForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  const consentFormData = new FormData(consentForm);
+  console.log(consentFormData);
+
   document.getElementById(
     "modal-text"
   ).innerHTML = `<div class="modal-inner-loading">
