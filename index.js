@@ -4,10 +4,12 @@ const consentForm = document.getElementById("consent-form");
 const modalText = document.getElementById("modal-text");
 const declineBtn = document.getElementById("decline-btn");
 
+//Display the modal
 setTimeout(() => {
   modal.style.display = "inline";
 }, 1500);
 
+//Close the modal x
 closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
 });
@@ -16,6 +18,7 @@ declineBtn.addEventListener("mouseover", () => {
   console.log("Hovered");
 });
 
+//Consent form
 consentForm.addEventListener("submit", (e) => {
   e.preventDefault();
 

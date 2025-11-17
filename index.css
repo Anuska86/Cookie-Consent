@@ -9,7 +9,7 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
   color: #222;
-  background-color: #cadbcb;
+  background: linear-gradient(to bottom, #dbe6e4, #cadbcb, #a8bcae);
 }
 
 /* TYPOGRAPHY */
