@@ -24,4 +24,8 @@ consentForm.addEventListener("submit", (e) => {
 </div>`;
 
   consentForm.style.display = "none";
+
+  setTimeout(() => {
+    document.getElementById("upload-text").textContent = `Making the sale...`;
+  }, 1500);
 });
