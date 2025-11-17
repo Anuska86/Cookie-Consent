@@ -163,3 +163,9 @@ input {
   line-height: 23px;
   margin-bottom: 0;
 }
+
+/*Img*/
+
+img.loading {
+  height: 80px;
+}

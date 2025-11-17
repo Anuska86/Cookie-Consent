@@ -22,4 +22,6 @@ consentForm.addEventListener("submit", (e) => {
         Uploading your data to the dark web...
     </p>
 </div>`;
+
+  consentForm.style.display = "none";
 });
