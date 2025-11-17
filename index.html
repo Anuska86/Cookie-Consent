@@ -46,24 +46,26 @@
           track you, and we'll definitely spam you. To use this site, enter your
           name and email address and accept our ridiculous terms and conditions.
         </p>
-        <form id="form">
-          <label for="name">Name:</label>
+        <form>
           <input
             type="text"
             id="name"
             name="name"
-            placeholder="Miley"
+            placeholder="Enter your full name"
             required
-          /><br /><br />
-          <label for="email">Email: </label>
+          />
+
           <input
             type="email"
             id="email"
             name="email"
-            placeholder="miley@example.com"
+            placeholder="Enter your email"
             required
-          /><br /><br />
-          <button type="submit">Submit</button>
+          />
+          <div class="modal-choice-btns" id="modal-choice-btns">
+            <button type="submit" class="modal-btn">Accept</button>
+            <button class="modal-btn">Decline</button>
+          </div>
         </form>
       </div>
     </div>
