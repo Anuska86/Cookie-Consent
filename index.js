@@ -15,7 +15,7 @@ consentForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const consentFormData = new FormData(consentForm);
-  console.log(consentFormData);
+  const userName = consentFormData.get("name");
 
   document.getElementById(
     "modal-text"
@@ -35,7 +35,7 @@ consentForm.addEventListener("submit", (e) => {
   setTimeout(() => {
     document.getElementById(
       "modal-inner"
-    ).innerHTML = `<h2>Thanks you sucker! </h2>
+    ).innerHTML = `Thanks <span class="modal-display-name">${userName}</span>, you sucker! </h2>
     <p>We just sold the rights to your eternal soul.</p>
     <div class="devil-gif">
         <img src="images/devil-robot.gif">
