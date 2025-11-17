@@ -1,3 +1,4 @@
+/* GLOBAL RESET & FONT */
 * {
   box-sizing: border-box;
 }
@@ -6,17 +7,20 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   color: #222;
   background-color: #cadbcb;
 }
 
-/* typography */
+/* TYPOGRAPHY */
 
 h1 {
   font-size: 48px;
   line-height: 60px;
   font-weight: 900;
+  color: #007bff;
+  text-align: center;
+  padding-top: 20px;
 }
 
 h2 {
@@ -27,24 +31,29 @@ h3 {
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
+  text-align: center;
+  padding: 10px 0;
 }
 
 p {
   font-size: 18px;
   line-height: 28px;
+  padding: 10px 0;
 }
 
+/* LIST STYLES (The 'Benefits') */
 ul {
   list-style: none;
-  padding: 5px 0 0 0;
+  padding: 10px 0;
 }
 
 li {
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 12px;
-  font-weight: 500;
-  font-size: 22px;
+  font-weight: 700;
+  font-size: 24px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .li-green {
@@ -60,112 +69,146 @@ li {
   background-color: #c1a8c5;
 }
 
-/* layout */
+/* MAIN LAYOUT */
+main {
+  width: 90%;
+  max-width: 650px;
+  margin: 30px auto;
+}
+
+.section-container {
+  background-color: #ffffff;
+  padding: 10px 30px 30px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 img {
   width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin: 20px 0;
 }
 
-main {
-  width: 400px;
-  margin: 0 auto;
-}
-
-/* modal */
+/* --- MODAL STYLES --- */
 
 .modal {
-  height: 420px;
-  width: 350px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 6px 2px #666;
+  width: 90%;
+  max-width: 400px;
+  min-height: 420px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 4px #000;
   background-color: #212529;
   color: whitesmoke;
   position: fixed;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: none;
+  z-index: 1000;
 }
 
 .modal-inner {
-  width: 290px;
+  width: 90%;
   margin: 0 auto;
+  padding: 10px 0 20px 0;
+  text-align: center;
 }
 
 .modal-inner-loading {
   text-align: center;
+  padding-top: 40px;
 }
 
-/* modal buttons */
+/* Modal Input and Form */
+#consent-form {
+  padding-top: 15px;
+}
 
+input {
+  margin-bottom: 15px;
+  border: 2px solid #007bff;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Modal Buttons */
 .close-modal-btn-container {
   text-align: right;
-  margin: 9px;
+  margin: 10px;
 }
 
 .modal-close-btn {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
   background-color: transparent;
-  border: 1px solid transparent;
-  color: whitesmoke;
+  border: none;
+  color: #ccc;
+  transition: color 0.2s;
 }
 
-.modal-close-btn:hover,
-.modal-close-btn:active {
+.modal-close-btn:hover {
   color: red;
   cursor: pointer;
 }
 
-.modal-close-btn:disabled {
-  color: whitesmoke;
-  opacity: 0.2;
-  cursor: not-allowed;
-}
-
 .modal-choice-btns {
-  margin-top: 10px;
-  padding: 8px 16px;
+  margin-top: 15px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 .modal-btn {
-  padding: 10px 24px;
+  flex-grow: 1;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Specific button styles for Accept/Decline */
+.modal-choice-btns button:first-child {
+  background-color: #28a745;
+  color: white;
+}
+
+.modal-choice-btns button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.modal-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
   cursor: pointer;
 }
 
-/* modal input */
+/* Modal After Submit */
 
-input {
-  margin-top: 10px;
-  border: 1px solid #212529;
-  padding: 10px;
-  width: 100%;
-  border-radius: 3px;
+.modal-text {
+  height: auto;
+  min-height: 100px;
+  line-height: 25px;
+  margin-bottom: 10px;
 }
-
-/* modal after submit */
 
 .loading {
   width: 100%;
   margin-top: 10px;
 }
 
-.modal-display-name {
-  color: fuchsia;
-}
-
-.modal-text {
-  height: 140px;
-  line-height: 23px;
-  margin-bottom: 0;
-}
-
-/*Img*/
-
 img.loading {
   height: 80px;
+}
+
+.devil-gif img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
 }
