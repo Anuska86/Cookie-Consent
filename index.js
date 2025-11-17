@@ -26,7 +26,7 @@ consentForm.addEventListener("submit", (e) => {
   consentForm.style.display = "none";
 
   setTimeout(() => {
-    document.getElementById("upload-text").textContent = `Making the sale...`;
+    document.getElementById("uploadText").textContent = `Making the sale...`;
   }, 1500);
 
   setTimeout(() => {
