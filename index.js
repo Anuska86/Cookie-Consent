@@ -5,6 +5,7 @@ const modalText = document.getElementById("modal-text");
 
 setTimeout(() => {
   modal.style.display = "inline";
+  closeBtn.disabled = true;
 }, 1500);
 
 closeBtn.addEventListener("click", () => {
@@ -40,5 +41,7 @@ consentForm.addEventListener("submit", (e) => {
     <div class="devil-gif">
         <img src="images/devil-robot.gif">
     </div>`;
+
+    closeBtn.disabled = false;
   }, 3000);
 });
