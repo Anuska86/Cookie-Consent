@@ -218,3 +218,9 @@ img.loading {
   margin: 20px auto;
   display: block;
 }
+
+/*Reverse*/
+
+.reverse {
+  flex-direction: row-reverse;
+}

@@ -3,6 +3,7 @@ const closeBtn = document.getElementById("modal-close-btn");
 const consentForm = document.getElementById("consent-form");
 const modalText = document.getElementById("modal-text");
 const declineBtn = document.getElementById("decline-btn");
+const choiceBtnModal = document.getElementById("modal-choice-btns");
 
 //Display the modal
 setTimeout(() => {
@@ -14,8 +15,10 @@ closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
+/*reverse*/
+
 declineBtn.addEventListener("mouseover", () => {
-  console.log("Hovered");
+  choiceBtnModal.classList.toggle("reverse");
 });
 
 //Consent form
